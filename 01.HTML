@@ -17,7 +17,14 @@
         header, section, nav, article, footer {
             margin: 15px;
             padding: 15px;
+            display: block;
         } 
+        .clearfix {
+            overflow: auto;
+        }
+        .after-box {
+            clear: both;
+        }
         p {
             font-family: 300;   
             
@@ -27,22 +34,22 @@
         } 
         section {
             background: rgba(0,0,0,0.1);
-            position: relative;
         } 
         nav {
             background: rgba(0,0,0,0.5);
-            position: absolute;
-            left: 0px;
-            width: 200px;
+            float: left;
+            width: 30%;
             color: white;
             font-size: 12px;
             font-family: 500;
-            
-        }  
+        } 
+        .row {
+            float: left;
+            width: 60%;
+        }
         article {
             background:rgba(0,0,0,0.2);
-            color:darkgray;
-            margin-left: 220px;
+            color: darkgray;
         } 
        
         h2 {
@@ -55,14 +62,10 @@
             color: white;
             text-align: center;
             font-size: bold;
-            position: fixed;
-            bottom: 0px;
-            left: 0px;
             height: 40px;
             width: 100%;
             margin: 0px;
             font-size: 12px;
-            
         }
         h1 {
             color: white;
@@ -77,9 +80,9 @@
 </head>
 <body>
     <header>
-        <h1>Estructura con posición Absoluta</h1>
+        <h1>Layout con FLoat</h1>
     </header>
-    <section>
+    <section class="clearfix">
         <nav>
             <ul>
                 <li>Inicio</li>
@@ -88,6 +91,7 @@
                 <li>Contacto</li>
             </ul>
         </nav> 
+        <div class="row">
         <article>
             <h2>Artículo 1</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo diam, vestibulum id turpis eu, sagittis vulputate sapien. Fusce et magna non felis porta convallis vulputate eget nibh. Quisque in maximus diam, at fermentum ex. Donec sollicitudin, nisl eu pulvinar fringilla, ligula ligula consequat nunc, eget porttitor orci ipsum in tortor. In mattis ut sem et tempor. Donec et nulla ut odio congue efficitur nec sed quam. Aliquam dignissim risus ligula, nec pellentesque odio bibendum ut.</p>
@@ -100,8 +104,9 @@
              <h2>Artículo 3</h2>
              <p>Sed ornare feugiat dui eu fringilla. Nullam maximus ullamcorper lectus, ut malesuada nunc tristique in. Curabitur scelerisque purus vel lorem feugiat, a ornare erat placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc fringilla nulla elit, a viverra est rutrum eu. Fusce gravida mi elit, ut accumsan ante suscipit in. Ut ac mi nec libero faucibus aliquet. Morbi vitae tempor eros. Nam eget nunc in elit rhoncus auctor non vel nibh. Integer gravida, ante sit amet pulvinar vehicula, velit tellus pretium nunc, vel lobortis nunc sem eget justo. Suspendisse blandit magna quis maximus lacinia. Pellentesque commodo quis nisl sit amet congue. Fusce commodo magna id gravida varius. In tristique, ipsum ut faucibus ornare, dolor metus feugiat quam, vel tempus mauris felis vel libero.</p>
         </article>
+        </div>
      </section>
-<footer>
+<footer class="after-box">
     © 2020 Todos los derechos reservados
 </footer>   
 </body>
