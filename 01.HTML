@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Layout con Float</title>
    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="with=device-width">
     <style>
         * {
            box-sizing: border-box; 
@@ -37,15 +38,12 @@
         } 
         nav {
             background: rgba(0,0,0,0.5);
-            float: left;
-            width: 30%;
             color: white;
             font-size: 12px;
             font-family: 500;
         } 
         .row {
-            float: left;
-            width: 60%;
+            display: block;
         }
         article {
             background:rgba(0,0,0,0.2);
@@ -73,8 +71,27 @@
             font-style: 900;
             
         }
-        
-
+        @media screen and (min-width:768px) {
+            /* Aquí inician los estilos de tablet */
+            nav {float: left;
+            width: 30%; }
+           .row{
+                float: left;
+            width: 65%;    
+                }
+            
+            /* aquí terminan los estilos de tablet */
+       
+        @media screen and (min-width:1024px) {
+            /* Aquí inician los estilos de laptop */
+            .row{
+                width: 66%;
+                }
+            h1 {
+                font-size: 48px;
+            }
+            /* aquí terminan los estilos de laptop */
+        }
     </style>
     
 </head>
