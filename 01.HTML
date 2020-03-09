@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Layout con Float</title>
+	<title>Inline-Block</title>
    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="with=device-width">
     <style>
@@ -20,12 +20,7 @@
             padding: 15px;
             display: block;
         } 
-        .clearfix {
-            overflow: auto;
-        }
-        .after-box {
-            clear: both;
-        }
+
         p {
             font-family: 300;   
             
@@ -73,10 +68,13 @@
         }
         @media screen and (min-width:768px) {
             /* Aquí inician los estilos de tablet */
-            nav {float: left;
+            nav {
+        display: inline-block;
+                vertical-align: top;
             width: 30%; }
            .row{
-                float: left;
+            display: inline-block;
+            vertical-align: top;
             width: 65%;    
                 }
             
@@ -99,7 +97,7 @@
     <header>
         <h1>Layout con FLoat</h1>
     </header>
-    <section class="clearfix">
+    <section>
         <nav>
             <ul>
                 <li>Inicio</li>
@@ -123,7 +121,7 @@
         </article>
         </div>
      </section>
-<footer class="after-box">
+<footer>
     © 2020 Todos los derechos reservados
 </footer>   
 </body>
