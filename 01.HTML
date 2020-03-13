@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Flexbox</title>
+	<title>Layout con Flexbox Grid</title>
    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="with=device-width">
+    <link rel="stylesheet" href="flexboxgrid.css">
     <style>
         * {
            box-sizing: border-box; 
@@ -15,21 +16,18 @@
             padding:0;
             font-family: 'Poppins';
         }
-        header, section, nav, article, footer {
-            margin: 15px;
-            padding: 15px;
-            display: block;
-        } 
-
-        p {
+        p
+            {
             font-family: 300;   
             
         }
         header {
           /*background:  slategray;*/
+            padding: 2em 0;
         } 
         section {
             background: rgba(0,0,0,0.1);
+    
         } 
         nav {
             background: rgba(0,0,0,0.5);
@@ -37,12 +35,11 @@
             font-weight: 500;
             font-size: 14px;
         } 
-        .row {
-            display: block;
-        }
         article {
-            background:rgba(0,0,0,0.2);
+            /*background:rgba(0,0,0,0.2);*/
             color: darkgray;
+            margin: 1em;
+            padding: 1em;
         } 
        
         h2 {
@@ -55,9 +52,8 @@
             color: white;
             text-align: center;
             font-size: bold;
-            height: 40px;
-            width: 100%;
-            margin: 0px;
+            height: 70px;
+            padding: 1.5em 0;
             font-size: 12px;
         }
         h1 {
@@ -66,28 +62,9 @@
             font-style: 900;
             transition: all 1s ease-in-out;
         }
-        
-        @media screen and (min-width:768px) {
-            /* Aquí inician los estilos de tablet */
-            section {
-                display: flex;
-            }
-            nav {
-               width: 200px;
-                min-width: 100px;
-                }
-           .row{
-               flex: 1;  
-                }
-            
-            /* aquí terminan los estilos de tablet */
-       
+
         @media screen and (min-width:1024px) {
             /* Aquí inician los estilos de laptop */
-             nav {
-               width: 300px;
-                 min-width: 100px;
-                 }
             h1 {
                 font-size: 48px;
             }
@@ -98,27 +75,27 @@
 </head>
 <body>
     <header>
-        <h1>Layout con Flexbox</h1>
+        <h1>Layout con Flexbox Grid</h1>
     </header>
-    <section>
-        <nav>
-            <ul>
+    <section class="row">
+        <nav class="col-xs-12 col-sm-4 col-md-3">
+            <ul class="box">
                 <li>Inicio</li>
                 <li>Nosotros</li>
                 <li>Servicios</li>
                 <li>Contacto</li>
             </ul>
         </nav> 
-        <div class="row">
-        <article>
+        <div class="col-xs-12 col-sm-8 col-md-9">
+        <article class="box">
             <h2>Artículo 1</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc leo diam, vestibulum id turpis eu, sagittis vulputate sapien. Fusce et magna non felis porta convallis vulputate eget nibh. Quisque in maximus diam, at fermentum ex. Donec sollicitudin, nisl eu pulvinar fringilla, ligula ligula consequat nunc, eget porttitor orci ipsum in tortor. In mattis ut sem et tempor. Donec et nulla ut odio congue efficitur nec sed quam. Aliquam dignissim risus ligula, nec pellentesque odio bibendum ut.</p>
         </article>
-         <article>
+         <article class="box">
              <h2>Artículo 2</h2>
             <p>Quisque bibendum nisi sit amet nibh commodo, non pulvinar mi consequat. Nulla facilisi. Morbi viverra vel augue eu cursus. In hac habitasse platea dictumst. Cras lacinia rhoncus quam a aliquet. Donec et nunc dolor. Donec in enim ac tortor bibendum vestibulum vitae non sapien. Etiam quis neque eget tellus interdum sagittis. Etiam in nibh arcu. Nulla sapien odio, elementum sit amet auctor ac, posuere quis nibh. Duis dolor magna, dictum quis urna a, accumsan luctus leo.</p>
         </article>
-         <article>
+         <article class="box">
              <h2>Artículo 3</h2>
              <p>Sed ornare feugiat dui eu fringilla. Nullam maximus ullamcorper lectus, ut malesuada nunc tristique in. Curabitur scelerisque purus vel lorem feugiat, a ornare erat placerat. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc fringilla nulla elit, a viverra est rutrum eu. Fusce gravida mi elit, ut accumsan ante suscipit in. Ut ac mi nec libero faucibus aliquet. Morbi vitae tempor eros. Nam eget nunc in elit rhoncus auctor non vel nibh. Integer gravida, ante sit amet pulvinar vehicula, velit tellus pretium nunc, vel lobortis nunc sem eget justo. Suspendisse blandit magna quis maximus lacinia. Pellentesque commodo quis nisl sit amet congue. Fusce commodo magna id gravida varius. In tristique, ipsum ut faucibus ornare, dolor metus feugiat quam, vel tempus mauris felis vel libero.</p>
         </article>
