@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Inline-Block</title>
+	<title>Flexbox</title>
    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="with=device-width">
     <style>
@@ -34,8 +34,8 @@
         nav {
             background: rgba(0,0,0,0.5);
             color: white;
-            font-size: 12px;
-            font-family: 500;
+            font-weight: 500;
+            font-size: 14px;
         } 
         .row {
             display: block;
@@ -66,25 +66,28 @@
             font-style: 900;
             transition: all 1s ease-in-out;
         }
+        
         @media screen and (min-width:768px) {
             /* Aquí inician los estilos de tablet */
+            section {
+                display: flex;
+            }
             nav {
-        display: inline-block;
-                vertical-align: top;
-            width: 30%; }
+               width: 200px;
+                min-width: 100px;
+                }
            .row{
-            display: inline-block;
-            vertical-align: top;
-            width: 65%;    
+               flex: 1;  
                 }
             
             /* aquí terminan los estilos de tablet */
        
         @media screen and (min-width:1024px) {
             /* Aquí inician los estilos de laptop */
-            .row{
-                width: 66%;
-                }
+             nav {
+               width: 300px;
+                 min-width: 100px;
+                 }
             h1 {
                 font-size: 48px;
             }
@@ -95,7 +98,7 @@
 </head>
 <body>
     <header>
-        <h1>Layout con FLoat</h1>
+        <h1>Layout con Flexbox</h1>
     </header>
     <section>
         <nav>
