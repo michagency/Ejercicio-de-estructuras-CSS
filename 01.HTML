@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Flexbox</title>
+	<title>Layout con CSS Grid</title>
    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="with=device-width">
     <style>
@@ -70,24 +70,17 @@
         @media screen and (min-width:768px) {
             /* Aquí inician los estilos de tablet */
             section {
-                display: flex;
+                display: grid;
+                grid-template: 1fr  / 200px 1fr;
             }
-            nav {
-               width: 200px;
-                min-width: 100px;
-                }
-           .row{
-               flex: 1;  
-                }
-            
+
             /* aquí terminan los estilos de tablet */
        
         @media screen and (min-width:1024px) {
             /* Aquí inician los estilos de laptop */
-             nav {
-               width: 300px;
-                 min-width: 100px;
-                 }
+              section {
+                grid-template: 1fr  / 300px 1fr;
+            }
             h1 {
                 font-size: 48px;
             }
@@ -98,7 +91,7 @@
 </head>
 <body>
     <header>
-        <h1>Layout con Flexbox</h1>
+        <h1>Layout con CSS Grid</h1>
     </header>
     <section>
         <nav>
